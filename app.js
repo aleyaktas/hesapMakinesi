@@ -7,7 +7,11 @@ const Topla = (birinciSayi, ikinciSayi) => {
 }
 
 const Bolme = (birinciSayi, ikinciSayi) => {
-    return birinciSayi/ikinciSayi
+    if(ikinciSayi==0) {
+        return console.log("İkinci sayı sıfırdan farklı olmalı!")
+    } else {
+        return  console.log("Bölme: " + birinciSayi/ikinciSayi)
+    }
 }
 
 prompt.get([{
@@ -22,5 +26,5 @@ prompt.get([{
       return true;
     }
   }], function (err, result) {
-    return console.log("Bolme: "+ Bolme(parseInt(result.birinciSayi), parseInt(result.ikinciSayi)))
+    return Bolme(parseInt(result.birinciSayi), parseInt(result.ikinciSayi))
 });
