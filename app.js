@@ -6,6 +6,10 @@ const Topla = (birinciSayi, ikinciSayi) => {
     return birinciSayi+ikinciSayi
 }
 
+const Bolme = (birinciSayi, ikinciSayi) => {
+    return birinciSayi/ikinciSayi
+}
+
 prompt.get([{
     name: 'birinciSayi',
 
@@ -18,5 +22,5 @@ prompt.get([{
       return true;
     }
   }], function (err, result) {
-    return console.log("Toplam: "+ Topla(parseInt(result.birinciSayi), parseInt(result.ikinciSayi)))
+    return console.log("Bolme: "+ Bolme(parseInt(result.birinciSayi), parseInt(result.ikinciSayi)))
 });
